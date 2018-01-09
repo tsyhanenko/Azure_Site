@@ -151,6 +151,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Views\Goods\Index.cshtml" />
+    <Content Include="Views\Goods\GetGoodsList.cshtml" />
+    <Content Include="Views\Goods\GetCategoryList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

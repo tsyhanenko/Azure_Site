@@ -1,0 +1,27 @@
+﻿@model AspNetIdentity2ExtendingUsersAndRoles.Models.GoodsViewModel
+
+@foreach (var s in Model.Goods)
+{
+
+    <div class="card" style="width: 20rem; margin: 40px; display:inline-block ">
+        <img class="card-img-top" src="/Image/@s.Image" width="150" height="150">
+        <div class="card-body">
+            <h4 class="card-title">Имя: @s.GoodName</h4>
+            <p class="card-text">Цена: @s.GoodPrice $</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Описание товара: @s.GoodDescription </li>
+            <li class="list-group-item"> Категория: @s.GoodCategory</li>
+
+        </ul>
+        <div class="card-body">
+
+            @Html.ActionLink("Add to a cart", "Add", "Cart", new { id = @s.GoodId }, new { @class = "btn btn-dark" })
+
+
+
+
+
+        </div>
+    </div>
+}
