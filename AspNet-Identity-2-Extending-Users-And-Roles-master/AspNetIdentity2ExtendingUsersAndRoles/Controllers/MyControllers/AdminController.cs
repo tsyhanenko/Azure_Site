@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AspNetIdentity2ExtendingUsersAndRoles.Controllers.MyControllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         static int goodsOnPage = 10;
