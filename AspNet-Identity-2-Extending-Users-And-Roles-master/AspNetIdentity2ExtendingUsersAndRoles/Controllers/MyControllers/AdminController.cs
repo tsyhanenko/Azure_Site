@@ -9,7 +9,7 @@ namespace AspNetIdentity2ExtendingUsersAndRoles.Controllers.MyControllers
 {
     public class AdminController : Controller
     {
-        static int goodsOnPage = 3;
+        static int goodsOnPage = 10;
         static List<Good> goods = GoodstRepository.GetRepository();
         public ActionResult Index(int id = 1)
         {

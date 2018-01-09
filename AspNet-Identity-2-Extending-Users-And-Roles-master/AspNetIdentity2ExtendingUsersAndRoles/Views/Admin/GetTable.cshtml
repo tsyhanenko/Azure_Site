@@ -60,7 +60,7 @@
     <div>
         @for (int i = 0; i < ViewBag.PageCount; i++)
         {
-            @Ajax.ActionLink("1", "GetTable", new { id = i + 1 }, new AjaxOptions { UpdateTargetId = "goods_list" }, new { @class = "btn btn-outline-success" })
+            @Ajax.ActionLink("{@i + 1}", "GetTable", new { id = i + 1 }, new AjaxOptions { UpdateTargetId = "goods_list" }, new { @class = "btn btn-outline-success" })
         }
     </div>
 </center>
