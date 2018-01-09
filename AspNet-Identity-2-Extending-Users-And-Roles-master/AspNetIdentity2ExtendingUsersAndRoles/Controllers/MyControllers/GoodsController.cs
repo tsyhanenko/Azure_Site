@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AspNetIdentity2ExtendingUsersAndRoles.Controllers.MyControllers
 {
+    [AllowAnonymous]
     public class GoodsController : Controller
     {
         int pagesize = 3;
