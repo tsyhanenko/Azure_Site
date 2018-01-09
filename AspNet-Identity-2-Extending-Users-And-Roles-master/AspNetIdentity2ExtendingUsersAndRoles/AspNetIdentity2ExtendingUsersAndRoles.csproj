@@ -149,10 +149,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Image\1.jpg" />
+    <Content Include="Image\2.jpg" />
+    <Content Include="Image\3.jpg" />
+    <Content Include="Image\4.jpg" />
+    <Content Include="Image\5.jpg" />
+    <Content Include="Image\6.jpg" />
+    <Content Include="Image\7.jpg" />
+    <Content Include="Image\8.jpg" />
+    <Content Include="Image\9.jpg" />
     <Content Include="packages.config" />
     <Content Include="Views\Goods\Index.cshtml" />
     <Content Include="Views\Goods\GetGoodsList.cshtml" />
     <Content Include="Views\Goods\GetCategoryList.cshtml" />
+    <Content Include="Views\Nav\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,6 +244,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyControllers\GoodsController.cs" />
+    <Compile Include="Controllers\MyControllers\NavController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">

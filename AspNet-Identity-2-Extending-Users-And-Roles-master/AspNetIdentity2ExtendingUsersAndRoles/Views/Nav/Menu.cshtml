@@ -1,0 +1,10 @@
+﻿
+@model IEnumerable<string>
+<ul>
+    @foreach (var i in Model)
+    {
+
+        <li class="list-group-item list-group-item-action list-group-item-danger"> @Ajax.ActionLink(@i, "GetCategoryList", "Goods", new { category = i }, new AjaxOptions { UpdateTargetId = "goods_list" })</li>
+
+    }
+</ul>
