@@ -1,0 +1,66 @@
+﻿
+
+
+
+<table class="table table-bordered table-dark" style="margin-left:50px;">
+    <thead>
+        <tr>
+            <th scope="col">
+                Id
+            </th>
+            <th scope="col">
+                Name
+            </th>
+            <th scope="col">
+                Count
+            </th>
+            <th scope="col">
+                Category
+            </th>
+            <th scope="col">
+                Price
+            </th>
+            <th>
+                @Html.ActionLink("Add", "Edit", null, new { id = 0 }, new { @class = "btn btn-outline-success" })
+            </th>
+        </tr>
+    </thead>
+    <tbody id="goods_list">
+        @foreach (var i in ViewBag.Goods)
+            {
+            <tr scope="row">
+                <td>@i.GoodId</td>
+                <td>@i.GoodName</td>
+                <td>@i.GoodDescription</td>
+                <td>@i.GoodCategory</td>
+                <td>@i.GoodPrice</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = @i.GoodId }, new { @class = "btn btn-warning" })
+                </td>
+                <td>
+
+                    @Ajax.ActionLink("Remove", "Remove", new { id = @i.GoodId }, new AjaxOptions { UpdateTargetId = "goods_list" }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+
+
+
+
+
+
+
+
+
+    </tbody>
+</table>
+
+<center>
+    <div>
+        @for (int i = 0; i < ViewBag.PageCount; i++)
+        {
+            @Ajax.ActionLink("1", "GetTable", new { id = i + 1 }, new AjaxOptions { UpdateTargetId = "goods_list" }, new { @class = "btn btn-outline-success" })
+        }
+    </div>
+</center>
